@@ -1,0 +1,14 @@
+{
+  "private": true,
+  "scripts": {
+    "prepare": "nitropack prepare",
+    "dev": "nitropack dev",
+    "build": "nitropack build",
+    "preview": "node .output/server/index.mjs",
+    "test:cloudflare": "nitropack build --preset cloudflare_pages && npx wrangler pages dev dist/"
+  },
+  "dependencies": {
+    "md4w": "^0.0.2",
+    "nitropack": "npm:nitropack-nightly"
+  }
+}
